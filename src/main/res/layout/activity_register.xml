@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:text="@string/create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_createaccount"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:layout_marginTop="0dp"
+        android:gravity="center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/scrll_create"
+        android:layout_height="370dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/txt_createmail"
+                android:hint="@string/mail_address" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/txt_createpassword"
+                android:hint="@string/password" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/txt_createpasswordagain"
+                android:hint="@string/password_again" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txt_createfname"
+                android:hint="@string/name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txt_createlname"
+                android:hint="@string/surname_optional" />
+
+            <TextView
+                android:text="@string/sex"
+                android:layout_width="match_parent"
+                android:id="@+id/txt_sex"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/spn_createsex"
+                android:spinnerMode="dropdown"
+                android:outlineProvider="paddedBounds"
+                tools:targetApi="lollipop"
+                android:layout_height="30dp" />
+
+
+
+            <TextView
+                android:text="@string/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_city" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/spn_createcity"
+                android:spinnerMode="dialog"
+                android:outlineProvider="paddedBounds"
+                tools:targetApi="lollipop"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="@string/birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_bdate" />
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:id="@+id/date_createbdate"
+                android:layout_height="100dp"
+                style="@android:style/Widget.DatePicker" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/txt_createphone"
+                tools:ignore="LabelFor"
+                android:hint="@string/phone_optional" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:id="@+id/txt_createaddress"
+                tools:ignore="LabelFor"
+                android:hint="@string/address_optional" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:text="@string/create"
+        android:layout_height="50dp"
+        android:id="@+id/btn_createaccount"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp" />
+
+
+</RelativeLayout>

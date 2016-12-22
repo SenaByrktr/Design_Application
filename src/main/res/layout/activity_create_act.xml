@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_act"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.senakutlu.designapp.CreateActActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:id="@+id/scrll_activity"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <TextView
+            android:text="@string/create_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_createactivity"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="11dp"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/txt_createactivity"
+            android:layout_alignStart="@+id/txt_createactivity"
+            android:layout_marginTop="18dp"
+            android:id="@+id/txt_activityname"
+            android:hint="@string/activity_name"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <TextView
+            android:text="@string/city_of_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_activitycity"
+            android:layout_below="@+id/txt_activityname"
+            android:layout_alignLeft="@+id/txt_activityname"
+            android:layout_alignStart="@+id/txt_activityname"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_below="@+id/txt_activitycity"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <TextView
+            android:text="@string/beginning_date_of_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:id="@+id/txt_activitybegdate"
+            android:layout_below="@+id/spinner"
+            android:layout_alignLeft="@+id/txt_activitycity"
+            android:layout_alignStart="@+id/txt_activitycity"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/datePicker"
+            style="@android:style/Widget.DatePicker"
+            android:layout_below="@+id/txt_activitybegdate"
+            android:layout_alignLeft="@+id/txt_activitybegdate"
+            android:layout_alignStart="@+id/txt_activitybegdate"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <TextView
+            android:text="@string/terminate_date_of_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/txt_activityterdate"
+            android:layout_below="@+id/datePicker"
+            android:layout_alignLeft="@+id/datePicker"
+            android:layout_alignStart="@+id/datePicker"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="11dp"
+            android:id="@+id/datePicker2"
+            style="@android:style/Widget.DatePicker"
+            android:layout_below="@+id/txt_activityterdate"
+            android:layout_alignLeft="@+id/txt_activityterdate"
+            android:layout_alignStart="@+id/txt_activityterdate"
+            tools:ignore="ObsoleteLayoutParam" />
+
+            <TextView
+                android:text="@string/details_of_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_activitydetails" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txt_activitydetail"
+                android:hint="@string/details" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:text="@string/add_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_below="@id/scrll_activity"/>
+
+</RelativeLayout>
